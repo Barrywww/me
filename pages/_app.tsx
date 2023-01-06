@@ -1,6 +1,14 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import Head from "next/head"
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+// @ts-ignore
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Head>
+        <title>Yuchen Wang | 王雨宸</title>
+      </Head>
+      <Component {...pageProps} />
+    </>
+  )
 }
